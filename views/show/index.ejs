@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CA1 - Back-end Web Development</title>
+</head>
+
+<body>
+  <h2>Class listing</h2>
+  <table border='1'>
+    <thead>
+      <tr>
+        <td>Class</td>
+        <td>Personal</td>
+        <td>Weekday</td>
+        <td>Duration</td>
+        <td>Room</td>
+        <td>Price</td>
+      </tr>
+    </thead>
+    <tbody>
+      <% data.forEach(function(details)) { %>
+        <tr>
+            <td><% details.Class%></td>
+            <td><% details.Personal%></td>
+            <td><% details.Weekday%></td>
+            <td><% details.Duration%></td>
+            <td><% details.Room%></td>
+            <td><% details.Price%></td>
+        </tr>
+      <% })%>
+    </tbody>
+    <button><a href="index.ejs"></a>Return</button>
+  </table>
+</body>
+
+</html>
