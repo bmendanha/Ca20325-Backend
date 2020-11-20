@@ -21,19 +21,24 @@
       </tr>
     </thead>
     <tbody>
-      <% data.forEach(function(details)) { %>
-        <tr>
-            <td><% details.Class%></td>
-            <td><% details.Personal%></td>
-            <td><% details.Weekday%></td>
-            <td><% details.Duration%></td>
-            <td><% details.Room%></td>
-            <td><% details.Price%></td>
-        </tr>
+      <% data.forEach(function(details) { %>
+      <tr>
+        <td><%= details.Class%></td>
+        <td><%= details.Personal%></td>
+        <td><%= details.Weekday%></td>
+        <td><%= details.Duration%></td>
+        <td><%= details.Room%></td>
+        <td><%= details.Price%></td>
+
+        <td><a href="/edit/<%= details._id %>">Edit</a></td>
+        <td><a href="/delete/<%= details._id %>">Del</a></td>
+      </tr>
       <% })%>
     </tbody>
-    <button><a href="index.ejs"></a>Return</button>
-  </table>
+
+  </table><br>
+  <hr>
+  <button><a href="/">Add a new class(+)</a></button>
 </body>
 
 </html>

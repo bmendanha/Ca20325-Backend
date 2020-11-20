@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CA1 - Back-end Web Development</title>
+</head>
+
+<body>
+  <h2>Edit data</h2>
+  <% data.forEach(function(details) { %>
+  <form action="/edit/<%=details._id %>" method="POST">
+    <input type="text" value="<%=details.Class %>" name="Class"><br>
+    <input type="text" value="<%=details.Personal %>" name="Personal"><br>
+    <input type="text" value="<%=details.Weekday %>" name="Weekday"><br>
+    <input type="text" value="<%=details.Duration %>" name="Duration"><br>
+    <input type="text" value="<%=details.Room %>" name="Room"><br>
+    <input type="text" value="<%=details.Price %>" name="Price">
+    <hr>
+    <button><a href="/show/">Return</a></button><br>
+    <button type="submit">Update</button>
+  </form>
+  <% })%>
+</body>
+
+</html>
